@@ -268,7 +268,7 @@ login {
   flex: none;
 }
 
-.compare-form .form-group .panel {
+.compare-form .form-group .card {
   flex: none;
   width: 360px;
   height: 250px;
@@ -389,6 +389,10 @@ span.compare-notsure {
     padding-right: 90px;
 }
 
+.alerts-container .alert-selects {
+    display: flex;
+}
+
 .alert-summary a {
     cursor: pointer;
 }
@@ -427,6 +431,12 @@ span.compare-notsure {
 
 .dropdown .caret {
     margin-left: 2px;
+}
+
+#new-revision-input + .dropdown > ul {
+    left: inherit !important;
+    width: auto;
+    right: inherit;
 }
 
 .alert-summary-date {

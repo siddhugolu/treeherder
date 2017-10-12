@@ -3,7 +3,7 @@
     You must be logged into perfherder/treeherder and be a sheriff to make changes
   </div>
   <form class="form-inline">
-    <span ng-if="!alertId" ng-cloak>
+    <span ng-if="!alertId" ng-cloak class="alert-selects">
       <div class="form-group">
         <select ng-model="filterOptions.status"
                 ng-options="status.text for status in statuses track by status.id"

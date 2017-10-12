@@ -75,6 +75,7 @@ a {
 .dropdown-menu-right {
     left: inherit;
     right: 0;
+    width: auto;
 }
 
 /* Spacing for menus with adjacent icons */

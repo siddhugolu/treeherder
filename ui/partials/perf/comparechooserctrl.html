@@ -4,7 +4,7 @@
     <div class="spacer"></div>
     <div class="form-group container">
       <div class="spacer"></div>
-      <div class="panel card centered-element">
+      <div class="card centered-element">
         <div class="card-header">Base</div>
         <div class="card-body">
           <label for="original-project-selector">Project</label>
@@ -31,7 +31,7 @@
         </div>
         <label class="form-control-label" style="color:#A94442" ng-show="originalRevisionError">{{originalRevisionError}}"</label>
       </div>
-      <div class="panel card centered-element">
+      <div class="card centered-element">
         <div class="card-header">New</div>
         <div class="card-body">
           <label for="new-project-selector">Project</label>
@@ -39,11 +39,15 @@
           <label for="new-revision-input">Revision</label>
           <div class="form-group input-group" ng-class="{'has-danger': newRevisionError}">
             <input id="new-revision-input" maxlength="40" class="form-control" type="text" ng-model="newRevision" placeholder="Select or enter a revision"/>
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-light-bordered dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Recent <span class="caret"></span></button>
-              <ul class="dropdown-menu dropdown-menu-right" >
-                <li ng-repeat="tip in newTipList"><a ng-click="getNewTipRevision(tip.revision);">
+            <div class="input-group-btn dropdown">
+              <span type="button"
+                      class="btn btn-light-bordered dropdown-toggle"
+                      role="button"
+                      data-toggle="dropdown" aria-expanded="false">
+                Recent <span class="caret"></span></span>
+              <ul class="dropdown-menu dropdown-menu-right container"
+                  role="menu">
+                <li ng-repeat="tip in newTipList" class="dropdown-item"><a ng-click="getNewTipRevision(tip.revision);">
                     {{tip.revision | limitTo: 12}} {{tip.author}}
                 </a></li>
               </ul>
